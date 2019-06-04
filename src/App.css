@@ -18,7 +18,29 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.RW-CancelText {
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  justify-content: center;
 
+}
+.buttonTrue {
+color: #000;
+  }
+ .buttonFalse {
+  color: red;
+ 
+}
+.blackButton {
+  background-color: black;
+  color: white;
+}
+.redButton {
+  background-color: white;
+  color: black;
+}
 .App-link {
   color: #61dafb;
 }

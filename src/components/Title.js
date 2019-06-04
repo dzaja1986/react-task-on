@@ -8,7 +8,7 @@ export default class Title extends Component {
             tittleText: 'Welcome Milan',
             color: true,
             bgColor: '',
-            colors: ["red", "yellow", "blue", "green", "purple", "pink"],
+            colors: ["red", "yellow", "green", "purple", "pink"],
         }
     }
     handleClick = () => {
@@ -24,7 +24,6 @@ export default class Title extends Component {
     }
     render() {
         const { bgColor } = this.state;
-
 
         return (
             <div>

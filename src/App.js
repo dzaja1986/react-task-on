@@ -4,6 +4,10 @@ import Title from './components/Title';
 import Vezba from './components/Vezba'
 import Button from './components/Button';
 import Paragraph from './components/Paragraph'
+import Nav from './nav/nav'
+import Mycomponents from './components/Mycomponents'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+
 
 export default class App extends Component {
   constructor(props) {
@@ -13,7 +17,7 @@ export default class App extends Component {
       paragraphColor:''
     }
   }
-  changeTilte = () => {
+  changeTitle = () => {
     console.log("change title")
     this.setState({
       showTitle:true
@@ -22,14 +26,23 @@ export default class App extends Component {
   render() {
   return (
     <div className="App">
-           <Title />
+      <Router>
+        <div className="Nav">
+          <Nav />
+        </div>
+        <div className="MainContent">
+        <Route exact path="/components/vezba" component={Vezba} />
+        <Route exact path="/components/mycomponents" component={Mycomponents} />
+        </div>
+        </Router>
+           {/*<Title />
            <Button />
            <Paragraph />
-           
-    
+        
     <div>
-    <button onClick = {this.changeTilte} >Change Title</button>
-    </div>
+    <button onClick = {this.changeTitle} >Change Title</button>
+           </div>*/}
+    
     </div>
   );
 }

@@ -18,7 +18,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.RW-CancelText {
+.cancelText {
   cursor: pointer;
 }
 .container {
@@ -43,6 +43,9 @@ color: #000;
 }
 .App-link {
   color: #61dafb;
+}
+.Nav-Mobile-LogoContainer {
+ padding-right: 900px;
 }
 
 @keyframes App-logo-spin {

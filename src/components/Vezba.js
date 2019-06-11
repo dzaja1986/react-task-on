@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Input } from 'reactstrap';
 
+
 export default class Vezba extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ export default class Vezba extends Component {
   closeBtn = (i) => {
     console.log("Close BTN");
     this.setState({
-     keywords: [...this.state.keywords.slice(0, i), ...this.state.keywords.slice(i + 1)]
+     keywords: [...this.state.keywords.slice(0, i),...this.state.keywords.slice(i + 1)]
     })
    
   }
@@ -50,7 +51,7 @@ export default class Vezba extends Component {
       return (<div key={i + 100000}><p>{keyword}</p>
       <button onClick={() => this.closeBtn(i)} className="RemoveBtn">X</button>
       <p>
-      <span onClick={this.cancelBtn} className="RW-CancelText">cancel</span>
+      <span onClick={this.cancelBtn} className="cancelText">cancel</span>
       </p>
       </div>)
 

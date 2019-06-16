@@ -1,0 +1,9 @@
+.todo-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.todo-item {
+    border: 1px solid red;
+    margin-bottom: 20px;
+}

@@ -21,6 +21,7 @@ export default class Nav extends Component {
           <NavLink className="NavLink Nav-Navlink" to="/components/vezba">Moja vezba</NavLink>
           <br />
           <NavLink className="NavLink Nav-Navlink" to="/components/mycomponents">Nemanjine vezbe</NavLink>
+          <NavLink className="NavLink Nav-Navlink" to="/components/todo">TODO APP</NavLink>
       </div>  
              <div>
      

@@ -4,6 +4,7 @@ import Title from './components/Title';
 import Vezba from './components/Vezba'
 import Button from './components/Button';
 import Paragraph from './components/Paragraph'
+import Todo from './components/Todo/Todo'
 import Nav from './nav/nav'
 import Mycomponents from './components/Mycomponents'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
@@ -33,6 +34,7 @@ export default class App extends Component {
         <div className="MainContent">
         <Route exact path="/components/vezba" component={Vezba} />
         <Route exact path="/components/mycomponents" component={Mycomponents} />
+        <Route exact path="/components/todo" component={Todo} />
         </div>
         </Router>
            {/*<Title />

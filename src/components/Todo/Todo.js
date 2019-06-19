@@ -5,21 +5,13 @@ import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 
 import './Todo.css';
+import TodoListItem from './TodoListItem';
 
 class Todo extends React.Component {
 
     state = {
         inputValue: '',
-        todos: [
-            {
-                id: 1,
-                text: 'kupi mleko'
-            },
-            {
-                id: 2,
-                text: 'kupi slaninu'
-            }
-        ]
+        todos: []
     }
 
     handleChange = e => {
@@ -30,6 +22,13 @@ class Todo extends React.Component {
         })
 
     }
+    removeItems = () => {
+        console.log("remove")
+        this.setState({
+            todos:[]
+        })
+    }
+    
 
     handleClick = () => {
         const { inputValue, todos } = this.state;
@@ -43,6 +42,7 @@ class Todo extends React.Component {
             inputValue: ''
         })
     }
+   
 
     render() {
 
@@ -57,10 +57,12 @@ class Todo extends React.Component {
                     onChange={this.handleChange}
                     value={inputValue}
                 />
-
+                
                 <TodoList todos={todos} />
-
+                {/* // removeItem={this.removeItem}  */}
                 <TodoButton onCLick={this.handleClick} title="ADD" />
+             <button onClick={this.removeItems}>Delete</button>
+                
             </div>
         )
     }

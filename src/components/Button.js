@@ -6,7 +6,7 @@ export default class Button extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isHref: false,
+            isHref: true,
             color: true,
             btnText: 'Clikni ovde',
             bgColor: true,
@@ -29,11 +29,14 @@ export default class Button extends Component {
     toggleChange = () => {
         console.log("clicked")
         this.setState({
-
-            isHref: !this.state.isHref,
+           isHref: !this.state.isHref,
         });
     }
-
+    handleInfo = () => {
+        this.setState({
+            isHref: !this.state.isHref
+        })
+    }
 
     render() {
         let btn_class = this.state.bgColor ? "blackButton" : "redButton";
@@ -51,6 +54,10 @@ export default class Button extends Component {
                 <button className={this.state.color ? "buttonTrue" : "buttonFalse"} onClick={this.changeTxtColor}>{this.state.btnText}</button>
                 <button className={btn_class} onClick={this.changeBgColor} >Change background color</button>
                 </div>
+                <button type="button" onClick={this.handleInfo}>
+                        toggle info
+                    </button>
+                {this.state.isHref ? <p>jijojojoijojojoij</p> : null}
             </div>
 
 
